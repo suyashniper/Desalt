@@ -1,0 +1,14 @@
+# Basic usage (writes to input_desalted.csv)
+python3 desalt.py input.csv
+
+# Specify an output file
+python3 desalt.py input.csv -o output.csv
+
+# Specify the exact SMILES column name (if auto-detect fails)
+python3 desalt.py input.csv --smiles-col CustomSmiCol
+
+# Drop entries containing salts entirely instead of desalting them
+python3 desalt.py input.csv --drop-salts
+
+# Use a different delimiter (e.g., for TSV files)
+python3 desalt.py input.tsv --delimiter "\t"
